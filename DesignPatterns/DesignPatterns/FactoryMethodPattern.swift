@@ -1,0 +1,27 @@
+//
+//  FactoryMethodPattern.swift
+//  DesignPatterns
+//
+//  Created by Vincent Bacalso on 05/10/2016.
+//  Copyright © 2016 bluezald. All rights reserved.
+//
+
+import UIKit
+
+/**
+ 
+ Intent
+ 
+ Define an interface for creating an object, 
+ but let subclasses decide which class to instantiate. 
+ Factory Method lets a class defer instantiation to subclasses.
+ 
+ Defining a "virtual" constructor.
+ 
+ The new operator considered harmful.
+ 
+ */
+
+class FactoryMethodPattern: NSObject {
+
+}

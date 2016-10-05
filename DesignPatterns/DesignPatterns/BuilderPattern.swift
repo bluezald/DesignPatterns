@@ -86,3 +86,8 @@ public class Pizza {
     
 }
 
+/**
+ Common Usage or Examples:
+ 1. In a Restaurant - The Creation of Pizza or Meal
+ 
+ */
