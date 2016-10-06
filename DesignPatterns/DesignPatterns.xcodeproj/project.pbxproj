@@ -17,6 +17,10 @@
 		D67848E51DA4A70600E3B91A /* BuilderPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67848E41DA4A70600E3B91A /* BuilderPattern.swift */; };
 		D67848E71DA4DF2500E3B91A /* FactoryMethodPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67848E61DA4DF2500E3B91A /* FactoryMethodPattern.swift */; };
 		D67848E91DA4F6D700E3B91A /* ObjectPoolPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67848E81DA4F6D700E3B91A /* ObjectPoolPattern.swift */; };
+		D6BD71081DA5F80F007D5D31 /* PrototypePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD71071DA5F80F007D5D31 /* PrototypePattern.swift */; };
+		D6BD710A1DA618A0007D5D31 /* SingletonPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD71091DA618A0007D5D31 /* SingletonPattern.swift */; };
+		D6BD710C1DA62932007D5D31 /* AbstractFactoryPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD710B1DA62932007D5D31 /* AbstractFactoryPattern.swift */; };
+		D6BD710E1DA63656007D5D31 /* AdapterPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BD710D1DA63656007D5D31 /* AdapterPattern.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		D67848E41DA4A70600E3B91A /* BuilderPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderPattern.swift; sourceTree = "<group>"; };
 		D67848E61DA4DF2500E3B91A /* FactoryMethodPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryMethodPattern.swift; sourceTree = "<group>"; };
 		D67848E81DA4F6D700E3B91A /* ObjectPoolPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectPoolPattern.swift; sourceTree = "<group>"; };
+		D6BD71071DA5F80F007D5D31 /* PrototypePattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrototypePattern.swift; sourceTree = "<group>"; };
+		D6BD71091DA618A0007D5D31 /* SingletonPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonPattern.swift; sourceTree = "<group>"; };
+		D6BD710B1DA62932007D5D31 /* AbstractFactoryPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractFactoryPattern.swift; sourceTree = "<group>"; };
+		D6BD710D1DA63656007D5D31 /* AdapterPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdapterPattern.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,20 +116,15 @@
 			path = DesignPatternsTests;
 			sourceTree = "<group>";
 		};
-		D67848DE1DA49C3200E3B91A /* Builder */ = {
+		D67848DF1DA49C3A00E3B91A /* Creational */ = {
 			isa = PBXGroup;
 			children = (
 				D67848E41DA4A70600E3B91A /* BuilderPattern.swift */,
 				D67848E61DA4DF2500E3B91A /* FactoryMethodPattern.swift */,
 				D67848E81DA4F6D700E3B91A /* ObjectPoolPattern.swift */,
-			);
-			name = Builder;
-			sourceTree = "<group>";
-		};
-		D67848DF1DA49C3A00E3B91A /* Creational */ = {
-			isa = PBXGroup;
-			children = (
-				D67848DE1DA49C3200E3B91A /* Builder */,
+				D6BD71071DA5F80F007D5D31 /* PrototypePattern.swift */,
+				D6BD71091DA618A0007D5D31 /* SingletonPattern.swift */,
+				D6BD710B1DA62932007D5D31 /* AbstractFactoryPattern.swift */,
 			);
 			name = Creational;
 			sourceTree = "<group>";
@@ -129,6 +132,7 @@
 		D67848E21DA4A57B00E3B91A /* Structural */ = {
 			isa = PBXGroup;
 			children = (
+				D6BD710D1DA63656007D5D31 /* AdapterPattern.swift */,
 			);
 			name = Structural;
 			sourceTree = "<group>";
@@ -245,9 +249,13 @@
 			files = (
 				D67848E51DA4A70600E3B91A /* BuilderPattern.swift in Sources */,
 				D67848E71DA4DF2500E3B91A /* FactoryMethodPattern.swift in Sources */,
+				D6BD710A1DA618A0007D5D31 /* SingletonPattern.swift in Sources */,
 				D67848C11DA49A8500E3B91A /* ViewController.swift in Sources */,
+				D6BD710E1DA63656007D5D31 /* AdapterPattern.swift in Sources */,
 				D67848E91DA4F6D700E3B91A /* ObjectPoolPattern.swift in Sources */,
+				D6BD710C1DA62932007D5D31 /* AbstractFactoryPattern.swift in Sources */,
 				D67848E11DA4A48300E3B91A /* DesignPatternsTableViewController.swift in Sources */,
+				D6BD71081DA5F80F007D5D31 /* PrototypePattern.swift in Sources */,
 				D67848BF1DA49A8500E3B91A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

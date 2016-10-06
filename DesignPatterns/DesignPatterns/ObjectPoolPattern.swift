@@ -25,6 +25,12 @@ import UIKit
  */
 class ObjectPoolPattern: NSObject {
 
+    public func demo() {
+        let pool = Pool()
+        let iNeedAPoolObject = pool.getObject()
+        print(iNeedAPoolObject)
+    }
+    
 }
 
 class PooledObject {
@@ -71,5 +77,6 @@ class Pool {
  Examples:
  Office Warehouse
  TableView Cells
+ Database Connections
  
  */
