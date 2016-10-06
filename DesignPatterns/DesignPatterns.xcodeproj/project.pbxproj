@@ -16,6 +16,7 @@
 		D67848E11DA4A48300E3B91A /* DesignPatternsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67848E01DA4A48300E3B91A /* DesignPatternsTableViewController.swift */; };
 		D67848E51DA4A70600E3B91A /* BuilderPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67848E41DA4A70600E3B91A /* BuilderPattern.swift */; };
 		D67848E71DA4DF2500E3B91A /* FactoryMethodPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67848E61DA4DF2500E3B91A /* FactoryMethodPattern.swift */; };
+		D67848E91DA4F6D700E3B91A /* ObjectPoolPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67848E81DA4F6D700E3B91A /* ObjectPoolPattern.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		D67848E01DA4A48300E3B91A /* DesignPatternsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignPatternsTableViewController.swift; sourceTree = "<group>"; };
 		D67848E41DA4A70600E3B91A /* BuilderPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderPattern.swift; sourceTree = "<group>"; };
 		D67848E61DA4DF2500E3B91A /* FactoryMethodPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryMethodPattern.swift; sourceTree = "<group>"; };
+		D67848E81DA4F6D700E3B91A /* ObjectPoolPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectPoolPattern.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				D67848E41DA4A70600E3B91A /* BuilderPattern.swift */,
 				D67848E61DA4DF2500E3B91A /* FactoryMethodPattern.swift */,
+				D67848E81DA4F6D700E3B91A /* ObjectPoolPattern.swift */,
 			);
 			name = Builder;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				D67848E51DA4A70600E3B91A /* BuilderPattern.swift in Sources */,
 				D67848E71DA4DF2500E3B91A /* FactoryMethodPattern.swift in Sources */,
 				D67848C11DA49A8500E3B91A /* ViewController.swift in Sources */,
+				D67848E91DA4F6D700E3B91A /* ObjectPoolPattern.swift in Sources */,
 				D67848E11DA4A48300E3B91A /* DesignPatternsTableViewController.swift in Sources */,
 				D67848BF1DA49A8500E3B91A /* AppDelegate.swift in Sources */,
 			);
