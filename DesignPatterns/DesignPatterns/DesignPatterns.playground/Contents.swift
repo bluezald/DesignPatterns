@@ -1,34 +1,8 @@
-//
-//  BuilderPattern.swift
-//  DesignPatterns
-//
-//  Created by Vincent Bacalso on 05/10/2016.
-//  Copyright © 2016 bluezald. All rights reserved.
-//
+//: Playground - noun: a place where people can play
 
-/**
- The builder pattern is a good choice when designing classes whose constructors
- or static factorieswould have more than a handful of parameters
- 
- Problems Encountered, Why the use of Builder Pattern:
- Too many parameters on Telescoping Constructor Pattern, although this pattern
- is solved with Javabean Pattern: http://stackoverflow.com/a/1953567/602995
- 
- */
 import UIKit
 
-
-/**
- Intent
- 
- Separate the construction of a complex object from its representation 
- so that the same construction process can create different representations.
- Parse a complex representation, create one of several targets.
- */
-
-// The Builder pattern separates the construction of a complex object
-// from its representation so that the same construction process can create 
-// different representations.
+// MARK: Builder Pattern
 
 class BuilderPattern: NSObject {
     
@@ -36,17 +10,17 @@ class BuilderPattern: NSObject {
         let aPizza = Pizza.Builder(size: 12)
             .hasCheese(true)
             .hasPepperoni(false)
-            .hasBacon(true).build()
-        print(aPizza)
-
+            .hasBacon(true)
+        print("Size: \(aPizza.size), hasCheese: \(aPizza.hasCheese), hasPepperoni: \(aPizza.hasPepperoni)")
+        
     }
 }
 
 public class Pizza {
-    private var size: Int!
-    private var hasCheese: Bool?
-    private var hasPepperoni: Bool?
-    private var hasBacon: Bool?
+    var size: Int!
+    var hasCheese: Bool?
+    var hasPepperoni: Bool?
+    var hasBacon: Bool?
     
     public class Builder {
         fileprivate final var size: Int!
@@ -87,8 +61,22 @@ public class Pizza {
     
 }
 
-/**
- Common Usage or Examples:
- 1. In a Restaurant - The Creation of Pizza or Meal
- 
- */
+let builderPattern = BuilderPattern()
+builderPattern.demo()
+
+// MARK: Singleton Pattern
+
+class MotherShip {
+    static let sharedInstance = MotherShip()
+    private init() {}
+    
+    func doSomething() {
+        print("Do Something")
+    }
+    
+}
+
+let mothership = MotherShip.sharedInstance
+mothership.doSomething()
+
+

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D676FD121DA7391400F4C5C0 /* BridgePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676FD111DA7391400F4C5C0 /* BridgePattern.swift */; };
+		D676FD141DA74DA100F4C5C0 /* CompositePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676FD131DA74DA100F4C5C0 /* CompositePattern.swift */; };
+		D676FD161DA76DB500F4C5C0 /* DecoratorPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676FD151DA76DB500F4C5C0 /* DecoratorPattern.swift */; };
+		D676FD181DA77A0C00F4C5C0 /* FacadePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676FD171DA77A0C00F4C5C0 /* FacadePattern.swift */; };
+		D676FD1A1DA7807A00F4C5C0 /* FlyweightPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676FD191DA7807A00F4C5C0 /* FlyweightPattern.swift */; };
+		D676FD1D1DA791F900F4C5C0 /* PrivateClassDataPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676FD1C1DA791F900F4C5C0 /* PrivateClassDataPattern.swift */; };
+		D676FD1F1DA7996B00F4C5C0 /* ProxyPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676FD1E1DA7996B00F4C5C0 /* ProxyPattern.swift */; };
 		D67848BF1DA49A8500E3B91A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67848BE1DA49A8500E3B91A /* AppDelegate.swift */; };
 		D67848C11DA49A8500E3B91A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67848C01DA49A8500E3B91A /* ViewController.swift */; };
 		D67848C41DA49A8500E3B91A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D67848C21DA49A8500E3B91A /* Main.storyboard */; };
@@ -34,6 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D676FD111DA7391400F4C5C0 /* BridgePattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgePattern.swift; sourceTree = "<group>"; };
+		D676FD131DA74DA100F4C5C0 /* CompositePattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositePattern.swift; sourceTree = "<group>"; };
+		D676FD151DA76DB500F4C5C0 /* DecoratorPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoratorPattern.swift; sourceTree = "<group>"; };
+		D676FD171DA77A0C00F4C5C0 /* FacadePattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacadePattern.swift; sourceTree = "<group>"; };
+		D676FD191DA7807A00F4C5C0 /* FlyweightPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlyweightPattern.swift; sourceTree = "<group>"; };
+		D676FD1B1DA78D4C00F4C5C0 /* DesignPatterns.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DesignPatterns.playground; sourceTree = "<group>"; };
+		D676FD1C1DA791F900F4C5C0 /* PrivateClassDataPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateClassDataPattern.swift; sourceTree = "<group>"; };
+		D676FD1E1DA7996B00F4C5C0 /* ProxyPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyPattern.swift; sourceTree = "<group>"; };
 		D67848BB1DA49A8500E3B91A /* DesignPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D67848BE1DA49A8500E3B91A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D67848C01DA49A8500E3B91A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +118,7 @@
 				D67848C51DA49A8500E3B91A /* Assets.xcassets */,
 				D67848C71DA49A8500E3B91A /* LaunchScreen.storyboard */,
 				D67848CA1DA49A8500E3B91A /* Info.plist */,
+				D676FD1B1DA78D4C00F4C5C0 /* DesignPatterns.playground */,
 			);
 			path = DesignPatterns;
 			sourceTree = "<group>";
@@ -133,6 +149,13 @@
 			isa = PBXGroup;
 			children = (
 				D6BD710D1DA63656007D5D31 /* AdapterPattern.swift */,
+				D676FD111DA7391400F4C5C0 /* BridgePattern.swift */,
+				D676FD131DA74DA100F4C5C0 /* CompositePattern.swift */,
+				D676FD151DA76DB500F4C5C0 /* DecoratorPattern.swift */,
+				D676FD171DA77A0C00F4C5C0 /* FacadePattern.swift */,
+				D676FD191DA7807A00F4C5C0 /* FlyweightPattern.swift */,
+				D676FD1C1DA791F900F4C5C0 /* PrivateClassDataPattern.swift */,
+				D676FD1E1DA7996B00F4C5C0 /* ProxyPattern.swift */,
 			);
 			name = Structural;
 			sourceTree = "<group>";
@@ -247,15 +270,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D676FD181DA77A0C00F4C5C0 /* FacadePattern.swift in Sources */,
+				D676FD1D1DA791F900F4C5C0 /* PrivateClassDataPattern.swift in Sources */,
 				D67848E51DA4A70600E3B91A /* BuilderPattern.swift in Sources */,
+				D676FD121DA7391400F4C5C0 /* BridgePattern.swift in Sources */,
+				D676FD1A1DA7807A00F4C5C0 /* FlyweightPattern.swift in Sources */,
 				D67848E71DA4DF2500E3B91A /* FactoryMethodPattern.swift in Sources */,
 				D6BD710A1DA618A0007D5D31 /* SingletonPattern.swift in Sources */,
+				D676FD1F1DA7996B00F4C5C0 /* ProxyPattern.swift in Sources */,
 				D67848C11DA49A8500E3B91A /* ViewController.swift in Sources */,
 				D6BD710E1DA63656007D5D31 /* AdapterPattern.swift in Sources */,
 				D67848E91DA4F6D700E3B91A /* ObjectPoolPattern.swift in Sources */,
 				D6BD710C1DA62932007D5D31 /* AbstractFactoryPattern.swift in Sources */,
+				D676FD161DA76DB500F4C5C0 /* DecoratorPattern.swift in Sources */,
 				D67848E11DA4A48300E3B91A /* DesignPatternsTableViewController.swift in Sources */,
 				D6BD71081DA5F80F007D5D31 /* PrototypePattern.swift in Sources */,
+				D676FD141DA74DA100F4C5C0 /* CompositePattern.swift in Sources */,
 				D67848BF1DA49A8500E3B91A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

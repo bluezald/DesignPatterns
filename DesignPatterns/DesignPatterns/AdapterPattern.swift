@@ -22,6 +22,16 @@ import UIKit
  */
 
 class AdapterPattern: NSObject {
+    
+    func demo() {
+        let audioPlayer = AudioPlayer()
+        
+        audioPlayer.play(audioType: "mp3", fileName: "Where the light shines.mp3")
+        audioPlayer.play(audioType: "mp4", fileName: "Batman: Arkham Asylum.mp4")
+        audioPlayer.play(audioType: "vlc", fileName: "The Walking Dead.vlc")
+        audioPlayer.play(audioType: "avi", fileName: "The Avengers.avi")
+        
+    }
 
 }
 
@@ -30,11 +40,13 @@ protocol MediaPlayer {
     func play(audioType: String, fileName: String)
 }
 
+// Create an interface for the advance media player
 protocol AdvancedMediaPlayer {
     func playVLC(fileName: String)
     func playMp4(fileName: String)
 }
 
+// Let new Concrete classes implement Advance Media Player
 class VLCPlayer: AdvancedMediaPlayer {
     func playVLC(fileName: String) {
         print("Playing VLC File. Name: \(fileName)")
@@ -58,6 +70,8 @@ class Mp4Player: AdvancedMediaPlayer {
 
 // MARK: The Adapter
 
+// Here goes the adapter that implements the legacy player's interface
+// and has an instance variable for the advance player
 class MediaAdapter: MediaPlayer {
     
     var advancedMusicPlayer: AdvancedMediaPlayer?
