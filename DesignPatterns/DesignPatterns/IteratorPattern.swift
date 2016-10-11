@@ -8,7 +8,33 @@
 
 import UIKit
 
+/**
+ 
+ Intent
+ 
+ Provide a way to access the elements of an aggregate object sequentially 
+ without exposing its underlying representation.
+ 
+ The C++ and Java standard library abstraction that makes it possible to 
+ decouple collection classes and algorithms.
+ 
+ Promote to "full object status" the traversal of a collection.
+ 
+ Polymorphic traversal
+ 
+ */
+
 class IteratorPattern: NSObject {
+    
+    func demo() {
+        let namesRepo = NameRepository()
+        
+        while namesRepo.hasNext() {
+            if let name = namesRepo.next() {
+                print(name)
+            }
+        }
+    }
 
 }
 
@@ -37,31 +63,24 @@ protocol Container {
     func getIterator() -> Iterator
 }
 
-class NameRepository: Container {
+public class NameRepository: Iterator {
+    private var index = 0
     var names: [String] = ["Robert", "John", "Julie", "Lora"]
     
-    internal func getIterator() -> Iterator {
-        return NameIterator()
+    internal func hasNext() -> Bool {
+        if self.index < self.names.count {
+            return true
+        } else {
+            return false
+        }
     }
     
-    private class NameIterator: Iterator {
-        
-        var index: Int
-        
-        init() {
-            
+    internal func next() -> Any? {
+        if self.hasNext() {
+            self.index += 1
+            return names[self.index]
         }
-        
-        internal func hasNext() -> Bool {
-            
-            
-            
-        }
-        
-        internal func next() -> Any? {
-            <#code#>
-        }
-        
+        return nil
     }
     
 }

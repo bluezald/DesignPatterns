@@ -67,6 +67,8 @@ class Tatooine: Planet {
     }
 }
 
+// Basically collating different classes and packing into 1 Class
+
 class NameVisitor: PlanetVisitor {
     var name = ""
     
@@ -83,6 +85,28 @@ class NameVisitor: PlanetVisitor {
     }
     
 }
+
+protocol EmployeeVisitor {
+    func visit(employee: HourlyEmployee)
+    func visit(employee: SalariedEmployee)
+}
+
+protocol Employee2 {
+    func accept(visitor: EmployeeVisitor)
+}
+
+class HourlyEmployee: Employee2 {
+    internal func accept(visitor: EmployeeVisitor) {
+        
+    }
+}
+
+class SalariedEmployee: Employee2 {
+    internal func accept(visitor: EmployeeVisitor) {
+        
+    }
+}
+
 
 /**
  Example:

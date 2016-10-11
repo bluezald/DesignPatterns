@@ -43,3 +43,50 @@ class MyObject {
         }
     }
 }
+
+protocol Geometry {
+    func draw()
+}
+
+class Circle2: Geometry {
+    private var color: UIColor
+    var x: Int
+    var y: Int
+    var radius: Int
+    
+    init(color: UIColor) {
+        self.color = color
+    }
+    
+    func draw() {
+        print("Circle: Draw \(self.color) + x: \(self.x) + y: \(self.y) + radius: \(self.radius)")
+    }
+}
+
+class GeometryFactory {
+    static var circleMap: [UIColor : Circle2] = [UIColor: Circle2]()
+    
+    class func getCircle(color: UIColor) -> Geometry {
+        if let circle = circleMap[color] {
+            return circle
+        } else {
+            let circle = Circle2(color: color)
+            circleMap.updateValue(circle, forKey: color)
+            return circle
+        }
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
