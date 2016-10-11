@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D66E86631DAC844300B8F004 /* MementoPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E86621DAC844300B8F004 /* MementoPattern.swift */; };
+		D66E86651DAC90ED00B8F004 /* NullObjectPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E86641DAC90ED00B8F004 /* NullObjectPattern.swift */; };
+		D66E86671DAC942000B8F004 /* ObserverPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E86661DAC942000B8F004 /* ObserverPattern.swift */; };
+		D66E86691DACAF7700B8F004 /* StatePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E86681DACAF7700B8F004 /* StatePattern.swift */; };
+		D66E866B1DACB47500B8F004 /* StrategyPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E866A1DACB47500B8F004 /* StrategyPattern.swift */; };
+		D66E866D1DACBEC600B8F004 /* TemplateMethodPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E866C1DACBEC600B8F004 /* TemplateMethodPattern.swift */; };
+		D66E866F1DACC22B00B8F004 /* VisitorPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E866E1DACC22B00B8F004 /* VisitorPattern.swift */; };
 		D676FD121DA7391400F4C5C0 /* BridgePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676FD111DA7391400F4C5C0 /* BridgePattern.swift */; };
 		D676FD141DA74DA100F4C5C0 /* CompositePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676FD131DA74DA100F4C5C0 /* CompositePattern.swift */; };
 		D676FD161DA76DB500F4C5C0 /* DecoratorPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676FD151DA76DB500F4C5C0 /* DecoratorPattern.swift */; };
@@ -46,6 +53,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D66E86621DAC844300B8F004 /* MementoPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MementoPattern.swift; sourceTree = "<group>"; };
+		D66E86641DAC90ED00B8F004 /* NullObjectPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullObjectPattern.swift; sourceTree = "<group>"; };
+		D66E86661DAC942000B8F004 /* ObserverPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserverPattern.swift; sourceTree = "<group>"; };
+		D66E86681DACAF7700B8F004 /* StatePattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatePattern.swift; sourceTree = "<group>"; };
+		D66E866A1DACB47500B8F004 /* StrategyPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrategyPattern.swift; sourceTree = "<group>"; };
+		D66E866C1DACBEC600B8F004 /* TemplateMethodPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateMethodPattern.swift; sourceTree = "<group>"; };
+		D66E866E1DACC22B00B8F004 /* VisitorPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorPattern.swift; sourceTree = "<group>"; };
 		D676FD111DA7391400F4C5C0 /* BridgePattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgePattern.swift; sourceTree = "<group>"; };
 		D676FD131DA74DA100F4C5C0 /* CompositePattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositePattern.swift; sourceTree = "<group>"; };
 		D676FD151DA76DB500F4C5C0 /* DecoratorPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoratorPattern.swift; sourceTree = "<group>"; };
@@ -178,6 +192,13 @@
 				D67DE6381DAB62E4001C12FB /* InterpreterPattern.swift */,
 				D67DE63A1DAB74B5001C12FB /* IteratorPattern.swift */,
 				D67DE63C1DAB8901001C12FB /* MediatorPattern.swift */,
+				D66E86621DAC844300B8F004 /* MementoPattern.swift */,
+				D66E86641DAC90ED00B8F004 /* NullObjectPattern.swift */,
+				D66E86661DAC942000B8F004 /* ObserverPattern.swift */,
+				D66E86681DACAF7700B8F004 /* StatePattern.swift */,
+				D66E866A1DACB47500B8F004 /* StrategyPattern.swift */,
+				D66E866C1DACBEC600B8F004 /* TemplateMethodPattern.swift */,
+				D66E866E1DACC22B00B8F004 /* VisitorPattern.swift */,
 			);
 			name = Behavioral;
 			sourceTree = "<group>";
@@ -286,11 +307,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D676FD181DA77A0C00F4C5C0 /* FacadePattern.swift in Sources */,
+				D66E866B1DACB47500B8F004 /* StrategyPattern.swift in Sources */,
 				D676FD1D1DA791F900F4C5C0 /* PrivateClassDataPattern.swift in Sources */,
+				D66E86631DAC844300B8F004 /* MementoPattern.swift in Sources */,
 				D67848E51DA4A70600E3B91A /* BuilderPattern.swift in Sources */,
 				D676FD121DA7391400F4C5C0 /* BridgePattern.swift in Sources */,
 				D676FD1A1DA7807A00F4C5C0 /* FlyweightPattern.swift in Sources */,
+				D66E86691DACAF7700B8F004 /* StatePattern.swift in Sources */,
 				D67848E71DA4DF2500E3B91A /* FactoryMethodPattern.swift in Sources */,
+				D66E866D1DACBEC600B8F004 /* TemplateMethodPattern.swift in Sources */,
 				D6BD710A1DA618A0007D5D31 /* SingletonPattern.swift in Sources */,
 				D676FD1F1DA7996B00F4C5C0 /* ProxyPattern.swift in Sources */,
 				D67DE63B1DAB74B5001C12FB /* IteratorPattern.swift in Sources */,
@@ -298,12 +323,15 @@
 				D67DE6351DAB270E001C12FB /* ChainOfResponsibilityPattern.swift in Sources */,
 				D6BD710E1DA63656007D5D31 /* AdapterPattern.swift in Sources */,
 				D67848E91DA4F6D700E3B91A /* ObjectPoolPattern.swift in Sources */,
+				D66E86671DAC942000B8F004 /* ObserverPattern.swift in Sources */,
 				D6BD710C1DA62932007D5D31 /* AbstractFactoryPattern.swift in Sources */,
 				D676FD161DA76DB500F4C5C0 /* DecoratorPattern.swift in Sources */,
 				D67848E11DA4A48300E3B91A /* DesignPatternsTableViewController.swift in Sources */,
 				D6BD71081DA5F80F007D5D31 /* PrototypePattern.swift in Sources */,
+				D66E86651DAC90ED00B8F004 /* NullObjectPattern.swift in Sources */,
 				D676FD141DA74DA100F4C5C0 /* CompositePattern.swift in Sources */,
 				D67DE6391DAB62E4001C12FB /* InterpreterPattern.swift in Sources */,
+				D66E866F1DACC22B00B8F004 /* VisitorPattern.swift in Sources */,
 				D67848BF1DA49A8500E3B91A /* AppDelegate.swift in Sources */,
 				D67DE6371DAB3E10001C12FB /* CommandPattern.swift in Sources */,
 				D67DE63D1DAB8901001C12FB /* MediatorPattern.swift in Sources */,
