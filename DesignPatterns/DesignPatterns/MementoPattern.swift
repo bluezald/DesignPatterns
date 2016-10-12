@@ -28,44 +28,92 @@ import UIKit
  
  */
 
-typealias Memento = Dictionary<NSObject, AnyObject>
-
-let DPMementoKeyChapter = "com.valve.halflife.chapter"
-let DPMementoKeyWeapon = "com.valve.halflife.weapon"
-let DPMementoGameState = "com.valve.halflife.state"
-
 class MementoPattern: NSObject {
 
     func demo() {
+        let checkPoint = CheckPoint()
+        checkPoint.addGameStateEntry(level: 0, weapon: "Fire Ball", points: 20)
+        checkPoint.addGameStateEntry(level: 1, weapon: "Flood", points: 10)
+        checkPoint.printCheckPoint()
+        let memento = GameMemento(checkPoint: checkPoint)
+        checkPoint.addGameStateEntry(level: 2, weapon: "Crusher", points: 30)
+        checkPoint.addGameStateEntry(level: 4, weapon: "Flower", points: 30)
+        checkPoint.printCheckPoint()
         
+        checkPoint.applyMemento(memento: memento)
+        checkPoint.printCheckPoint()
     }
     
 }
 
-class GameState {
-//    var chapter: String = ""
-//    var weapon: String = ""
-//    
-//    func toMemento() -> Memento {
-//        return [ DPMementoKeyChapter as NSObject:chapter as AnyObject, DPMementoKeyWeapon:weapon ]
-//    }
-//    
-//    func restoreFromMemento(memento: Memento) {
-//        chapter = memento[DPMementoKeyChapter] as? String ?? "n/a"
-//        weapon = memento[DPMementoKeyWeapon] as? String ?? "n/a"
-//    }
-//}
-//
-//enum CheckPoint {
-//    static func saveState(memento: Memento, keyName: String = DPMementoGameState) {
-//        let defaults = UserDefaults.standard
-//        defaults.setObject(memento, forKey: keyName)
-//        defaults.synchronize()
-//    }
-//    
-//    static func restorePreviousState(keyName: String = DPMementoGameState) -> Memento {
-//        let defaults = UserDefaults.standard
-//        
-//        return defaults.objectForKey(keyName) as? Memento ?? Memento()
-//    }
+protocol Memento {
+    
 }
+
+protocol Originator {
+    func createMemento() -> Memento
+    func applyMemento(memento: Memento)
+}
+
+struct GameStateEntry {
+    var level: Int
+    var weapon: String
+    var points: Int
+}
+
+class CheckPoint: Originator {
+    var entries: [Int: GameStateEntry] = [:]
+    var totalPoints: Int = 0
+    var nextId: Int = 0
+    
+    func addGameStateEntry(level: Int, weapon: String, points: Int) {
+        let entry = GameStateEntry(level: level, weapon: weapon, points: points)
+        self.entries[self.nextId] = entry
+        self.nextId = self.nextId + 1
+        self.totalPoints = self.totalPoints + points
+    }
+    
+    func createMemento() -> Memento {
+        return GameMemento(checkPoint: self)
+    }
+    
+    func applyMemento(memento: Memento) {
+        guard let m = memento as? GameMemento else {
+            return
+        }
+        m.apply(checkPoint: self)
+    }
+    
+    func printCheckPoint() {
+        print("Printing CheckPoint")
+    }
+    
+    
+}
+
+struct GameMemento: Memento {
+    private let entries: [Int: GameStateEntry]
+    private let nextId: Int
+    private let totalPoints: Int
+    
+    init(checkPoint: CheckPoint) {
+        self.entries = checkPoint.entries
+        self.nextId = checkPoint.nextId
+        self.totalPoints = checkPoint.totalPoints
+    }
+    
+    func apply(checkPoint: CheckPoint) {
+        print("Restoring a game state to a checkpoint")
+        checkPoint.nextId = nextId
+        checkPoint.totalPoints = totalPoints
+        checkPoint.entries = entries
+    }
+}
+
+
+
+/**
+ Example:
+ History in Photoshop
+ 
+ */
