@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// The Builder pattern separates the construction of a complex object
+// from its representation so that the same construction process can create
+// different representations.
+public class Object {
+  
+  private var variable1: Int?
+  private var variable2: Bool?
+  
+  public class Builder {
+    fileprivate var variable1: Int?
+    fileprivate var variable2: Bool?
+    
+    init() { // add required stuff
+      
+    }
+    
+    public func setVariable1(_ variable1: Int) -&gt; Builder {
+      self.variable1 = variable1
+      return self
+    }
+    
+    public func hasVariable2(_ variable2: Bool) -&gt; Builder {
+      self.variable2 = variable2
+      return self
+    }
+    
+    public func build() -&gt; Object {
+      return Object(builder: self)
+    }
+  }
+  
+  private init(builder: Builder) {
+    self.variable1 = builder.variable1
+    self.variable2 = builder.variable2
+  }
+  
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BDBB6C80-2793-42F4-BBFA-8E61CBE84120</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Separate the construction of a complex object from its representation 
+ so that the same construction process can create different representations.
+ Parse a complex representation, create one of several targets.</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Builder Pattern</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
