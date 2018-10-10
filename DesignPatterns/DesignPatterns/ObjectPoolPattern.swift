@@ -66,10 +66,7 @@ class Pool {
         if let index = inUse.index(where: {$0.name == object.name}) {
             inUse.remove(at: index)
         }
-        
     }
-    
-    
 }
 
 /**

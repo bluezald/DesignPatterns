@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>class PooledObject {
+    let name: String
+    let serialNumber: Int
+    
+    init(name: String, serialNumber: Int) {
+        self.name = name
+        self.serialNumber = serialNumber
+    }
+}
+
+class Pool {
+    
+    private var available = Array&lt;PooledObject&gt;()
+    private var inUse = Array&lt;PooledObject&gt;()
+    
+    internal func getObject() -&gt; PooledObject {
+        if available.count &gt; 0 {
+            let object = available[0]
+            inUse.append(object)
+            available.remove(at: 0)
+            return object
+        } else {
+            let object = PooledObject(name: "Default Name", serialNumber: 0)
+            inUse.append(object)
+            return object
+        }
+    }
+    
+    internal func release(object: PooledObject) {
+        available.append(object)
+        if let index = inUse.index(where: {$0.name == object.name}) {
+            inUse.remove(at: index)
+        }
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2799F96E-97F6-4C0E-98A3-2C221372A8C3</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Object pooling can offer a significant performance boost; 
+ it is most effective in situations where the cost of initializing 
+ a class instance is high, the rate of instantiation of a class is high, 
+ and the number of instantiations in use at any one time is low.</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Object Pool Pattern</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
