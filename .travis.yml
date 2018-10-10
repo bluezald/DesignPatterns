@@ -1,0 +1,4 @@
+language: swift
+xcode_project: ./DesignPatterns/DesignPatterns.xcodeproj 
+xcode_scheme: DesignPatterns
+xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone X

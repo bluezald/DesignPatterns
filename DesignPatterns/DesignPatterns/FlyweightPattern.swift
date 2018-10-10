@@ -55,7 +55,7 @@ class Circle2: Geometry {
     var radius: Int
     
     init(color: UIColor) {
-        self.color = color
+      self.color = color
     }
     
     func draw() {

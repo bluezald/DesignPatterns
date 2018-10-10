@@ -1,6 +1,9 @@
 # DesignPatterns
 A Demo Project Code in Swift for Design Patterns that are mention here: https://sourcemaking.com/
 
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.com/bluezald/swift-code-catalog.svg?branch=master)](https://travis-ci.org/bluezald/design-patterns)
+
 ### Design Patterns
 #### Creational design patterns
 - Abstract Factory
@@ -26,3 +29,7 @@ A Demo Project Code in Swift for Design Patterns that are mention here: https://
 - Mediator
 - Memento
 - Observer
+
+### Code Snippets
+
+Usage: Add Snippets to your: ~/Library/Developer/Xcode/UserData/CodeSnippets
