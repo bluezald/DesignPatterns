@@ -24,10 +24,6 @@ import UIKit
  
  */
 
-class ProxyPattern: NSObject {
-
-}
-
 protocol IPlane {
     func takeOff()
 }

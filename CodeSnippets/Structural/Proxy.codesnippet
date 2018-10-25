@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>protocol IPlane {
+    func takeOff()
+}
+
+class Plane: IPlane {
+    internal func takeOff() {
+        print("Taking Off...")
+    }
+}
+
+class ProxyPlane: IPlane {
+    
+    private var driver: Driver
+    private var realPlane: IPlane
+    
+    init(driver: Driver) {
+        self.driver = driver
+        self.realPlane = Plane()
+    }
+    
+    internal func takeOff() {
+        if driver.age &lt;= 16 {
+            print("Sorry this driver is too young to drive a plane")
+        } else {
+            self.realPlane.takeOff()
+        }
+    }
+}
+
+class Driver {
+    var age: Int
+    
+    init(age: Int) {
+        self.age = age
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1C065379-F443-4A17-9A36-1C3CEE8BDA5E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Provide a surrogate or placeholder for another object 
+ to control access to it.
+ 
+ Use an extra level of indirection to support distributed, 
+ controlled, or intelligent access.
+ 
+ Add a wrapper and delegation to protect the real component 
+ from undue complexity.</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Proxy Pattern</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
