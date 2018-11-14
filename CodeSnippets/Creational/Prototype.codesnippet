@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/// This is base on this tutorial:
+/// https://medium.com/jeremy-codes/prototype-pattern-in-swift-1b50517d1075
+/// The explanation or reason for Prototype pattern is:
+/// If you think carefully this pattern is applied every time you use value types
+/// in Swift (Arrays, Int, Bool, etc), because every time you assign the value
+/// of an instance to another one a new copy is made with the same values.
+/// The problem is with reference values (classes) that every time you assign
+/// an instance to a new one both share its values and modifications to they.
+/// https://stackoverflow.com/a/38772757/602995
+protocol CloneableGame {
+  func setupScore(teamA: Int, teamB: Int)
+  func clone() -&gt; CloneableGame
+}
+
+class BasketballGame: CloneableGame {
+  
+  init() { }
+  
+  init(basketballGame: BasketballGame) {
+    // Setup here
+  }
+  
+  func setupScore(teamA: Int, teamB: Int) {
+    // More setup here, as we cannot customize via init here
+  }
+  
+  func clone() -&gt; CloneableGame {
+    return BasketballGame(basketballGame: self)
+  }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4114F2A1-03CB-4489-B529-6DBA02FDF245</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
+Co-opt one instance of a class for use as a breeder of all future instances. The new operator considered harmful.</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Prototype Pattern</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
